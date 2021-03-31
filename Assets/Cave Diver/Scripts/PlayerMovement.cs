@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        transform.position += Vector3.right * playerSpeed * Time.fixedDeltaTime;
+        //transform.position += Vector3.right * playerSpeed * Time.fixedDeltaTime;
         transform.position += Vector3.up * playerSpeed * Time.fixedDeltaTime;
 
         if (Input.GetButton("Dive"))
