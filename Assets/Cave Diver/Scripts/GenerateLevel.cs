@@ -10,13 +10,16 @@ public class GenerateLevel : MonoBehaviour
 
 
     private float oldX = 0;
-    //private float levelSpeed = 3;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        float xPos = Camera.main.transform.position.x;
+
+        nextModule = GameObject.Instantiate(levelModules[Random.Range(0, levelModules.Count)], new Vector3(xPos + 21, 0, 0), Quaternion.identity);
+
     }
 
     // Update is called once per frame
@@ -32,11 +35,10 @@ public class GenerateLevel : MonoBehaviour
 
         if (oldX - xPos <= 0.1f)
         {
-            nextModule = GameObject.Instantiate(levelModules[Random.Range(0, levelModules.Count)], new Vector3(xPos + 20, 0, 0), Quaternion.identity);
-            oldX = nextModule.position.x;
+            nextModule = GameObject.Instantiate(levelModules[Random.Range(0, levelModules.Count)], new Vector3(xPos + 40, 0, 0), Quaternion.identity);
+            oldX = nextModule.position.x - 20;
         }
-
-        //nextModule.transform.position += Vector3.left * levelSpeed * Time.deltaTime;
+        
     }
 
 }
