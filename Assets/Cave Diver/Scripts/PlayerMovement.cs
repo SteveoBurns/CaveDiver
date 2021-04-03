@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float playerSpeed = 5f;
-    [SerializeField] private float diveSpeed = 10f;
+    private float diveSpeed;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        diveSpeed = playerSpeed * 2;
     }
 
     // Update is called once per frame
