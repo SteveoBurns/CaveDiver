@@ -8,8 +8,11 @@ public class GenerateLevel : MonoBehaviour
 
     private Transform nextModule;
 
-
     private float oldX = 0;
+
+    [SerializeField] private GameObject airBubble;
+    
+    [SerializeField, Range(0,1)] private float powerUpChance;
     
 
 
@@ -35,10 +38,27 @@ public class GenerateLevel : MonoBehaviour
 
         if (oldX - xPos <= 0.1f)
         {
+            SpawnPowerUp();
+            
             nextModule = GameObject.Instantiate(levelModules[Random.Range(0, levelModules.Count)], new Vector3(xPos + 40, 0, 0), Quaternion.identity);
             oldX = nextModule.position.x - 20;
+
         }
         
     }
+
+    public void SpawnPowerUp()
+    {
+        float xPos = Camera.main.transform.position.x;
+
+        float chance = Random.Range(0f, 1f);
+        Debug.Log(chance);
+        if(chance > powerUpChance)
+        {
+            GameObject.Instantiate(airBubble, new Vector3(xPos + 40, 3, 0), Quaternion.identity);
+            Debug.Log("Spawned Air Bubble");
+        }
+    }
+
 
 }

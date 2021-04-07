@@ -184,8 +184,8 @@ TextureImporter:
       name: tiles_1
       rect:
         serializedVersion: 2
-        x: 112
-        y: 576
+        x: 113
+        y: 578
         width: 80
         height: 64
       alignment: 0
@@ -630,7 +630,7 @@ TextureImporter:
         width: 21
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -645,7 +645,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a2d2fe2731ace3a4891e1e5a4a24b56e
     internalID: 0
     vertices: []
     indices: 
