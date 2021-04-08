@@ -2,16 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMovement : MonoBehaviour
 {
+    [Header ("Speed")]
     [SerializeField] private float playerSpeed = 5f;
     private float diveSpeed;
-    
+    private float normalPlayerSpeed = 5f;
+
+    [Header("Flippers")]
+    [SerializeField] private float flipperSpeed = 7f;
+    [SerializeField] private float flipperDiveSpeed = 10.5f;
+    public static bool flippersOn = false;
+    public static float flipperBoostTimer = 3;
+
+    [Header("Player Animator")]
+    [SerializeField] private Animator animator;
+        
+
 
     // Start is called before the first frame update
     void Start()
     {
-        diveSpeed = playerSpeed * 2;
+        flippersOn = false;
+        diveSpeed = playerSpeed * 1.5f;
     }
 
     // Update is called once per frame
@@ -25,8 +39,32 @@ public class PlayerMovement : MonoBehaviour
             transform.position += Vector3.down * diveSpeed * Time.fixedDeltaTime;
         }
 
+        if (flippersOn)
+        {
+            FlippersOn();
+        }
         
        
+    }
+
+    private void FlippersOn()
+    {
+        
+        if (flipperBoostTimer > 0)
+        {
+            animator.SetBool("FlippersOn", true);
+            flipperBoostTimer -= Time.deltaTime;
+            playerSpeed = flipperSpeed;
+            diveSpeed = flipperDiveSpeed;
+        }
+        else if(flipperBoostTimer <= 0)
+        {
+            animator.SetBool("FlippersOn", false);
+            playerSpeed = normalPlayerSpeed;
+            diveSpeed = normalPlayerSpeed * 2;
+            flippersOn = false;
+        }
+        Debug.Log(flipperBoostTimer);
     }
    
 }

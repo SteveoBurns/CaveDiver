@@ -2,24 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static PlayerMovement;
+
 
 public class PlayerStats : MonoBehaviour
 {
-    
-    public static float oxygenLevel = 20;
+
+    public static float oxygenLevel;
+
     [Header("Oxygen")]
     [SerializeField] private float oxygenDiveUse = 2;
     [SerializeField] private float oxygenSwimUse = 0.5f;
-    [SerializeField] private float oxygenMaxLevel = 20;
-
+    [SerializeField] private float oxygenMaxLevel = 40;
     [SerializeField] private Slider oxygenGuage;
+
+    public static float health = 50;
+
+    [Header("Health")]
+    [SerializeField] private float healthMax = 50;
+    [SerializeField] private Slider healthSlider;
+    
+    
+
+    
 
 
     // Start is called just before any of the Update methods is called the first time
     private void Start()
     {
+        health = healthMax;
         oxygenLevel = oxygenMaxLevel;
         oxygenGuage.maxValue = oxygenMaxLevel;
+        healthSlider.maxValue = healthMax;
     }
 
 
@@ -28,6 +42,7 @@ public class PlayerStats : MonoBehaviour
     {
         OxygenUse();
         oxygenGuage.value = oxygenLevel;
+        healthSlider.value = health;
     }
 
     /// <summary>
@@ -41,16 +56,51 @@ public class PlayerStats : MonoBehaviour
         {
             oxygenLevel -= oxygenDiveUse * Time.deltaTime;
         }
-        Debug.Log(oxygenLevel);
+        //Debug.Log(oxygenLevel);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "AirBubble")
         {
-            oxygenLevel = oxygenMaxLevel;
+            if (oxygenLevel <= 30)
+            {
+                oxygenLevel += 10;
+            }
+            else
+            {
+                oxygenLevel = oxygenMaxLevel;
+            }
             Destroy(collider.gameObject);
-            Debug.Log("colision");
+            
+        }
+        if (collider.tag == "Flippers")
+        {
+            
+            PlayerMovement.flipperBoostTimer += 3;
+            PlayerMovement.flippersOn = true;
+            Destroy(collider.gameObject);
+            
+        }
+        if (collider.tag == "Mine")
+        {
+            
+            health -= 5;           
+            
+        }
+        if(collider.tag == "Health")
+        {
+            if(health <= 40)
+            {
+                health += 10;
+            }
+            else
+            {
+                health = healthMax;
+            }
+            Destroy(collider.gameObject);
         }
     }
+
+    
 }

@@ -18,5 +18,9 @@ public class Death : MonoBehaviour
         {
             SceneManager.LoadScene("Level 1");
         }
+        if(PlayerStats.health <= 0)
+        {
+            SceneManager.LoadScene("Level 1");
+        }
     }
 }
