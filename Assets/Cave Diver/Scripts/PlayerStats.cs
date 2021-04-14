@@ -85,7 +85,7 @@ public class PlayerStats : MonoBehaviour
         if (collider.tag == "Mine")
         {
             
-            health -= 5;           
+            health -= 10;           
             
         }
         if(collider.tag == "Health")
