@@ -159,7 +159,7 @@ MonoBehaviour:
   - {fileID: 8668334621882205861, guid: 502bf59af98bbfd44bc5b75f97a4b50a, type: 3}
   - {fileID: 8668334621882205861, guid: 26c91c2f2d78a1f45b7eb5397f252fb2, type: 3}
   airBubble: {fileID: 5336892529235186563, guid: 8834305e56311b743bf5af652291d6cb, type: 3}
-  airBubbleChance: 0.219
+  airBubbleChance: 0.3
   flippers: {fileID: 1185549367945119342, guid: 290f52382a259964e985310e286bd327, type: 3}
   flippersChance: 0.194
   healthKit: {fileID: 954508212580592589, guid: ca2229ad633ebbf478b703b6f770eb9d, type: 3}
