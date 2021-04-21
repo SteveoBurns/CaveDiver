@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float flipperSpeed = 7f;
     [SerializeField] private float flipperDiveSpeed = 10.5f;
     public static bool flippersOn = false;
-    public static float flipperBoostTimer = 3;
+    public static float flipperBoostTimer = 4;
 
     [Header("Player Animator")]
     [SerializeField] private Animator animator;
@@ -47,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
        
     }
 
+    /// <summary>
+    /// Controls movement values when the player picks up Flippers
+    /// </summary>
     private void FlippersOn()
     {
         

@@ -59,6 +59,10 @@ public class PlayerStats : MonoBehaviour
         //Debug.Log(oxygenLevel);
     }
 
+    /// <summary>
+    /// Handles the collisions with Power Ups and Mines
+    /// </summary>
+    /// <param name="collider">The collider of the object being hit</param>
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "AirBubble")
