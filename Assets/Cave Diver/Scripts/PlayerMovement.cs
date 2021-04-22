@@ -44,8 +44,15 @@ public class PlayerMovement : MonoBehaviour
         {
             FlippersOn();
         }
-        
-       
+
+        if (PlayerStats.oxygenLevel <= 0 || PlayerStats.health <= 0)
+        {
+            playerSpeed = 0;
+            animator.SetTrigger("OnDeath");
+
+        }
+
+
     }
 
     /// <summary>
