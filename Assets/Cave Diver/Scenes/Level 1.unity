@@ -158,8 +158,9 @@ MonoBehaviour:
   - {fileID: 8668334621882205861, guid: 739c0c59fd5fd66489048e354d29da61, type: 3}
   - {fileID: 8668334621882205861, guid: 502bf59af98bbfd44bc5b75f97a4b50a, type: 3}
   - {fileID: 8668334621882205861, guid: 26c91c2f2d78a1f45b7eb5397f252fb2, type: 3}
+  - {fileID: 8668334621882205861, guid: 1af544368657efa4db386a39744fb80d, type: 3}
   airBubble: {fileID: 5336892529235186563, guid: 8834305e56311b743bf5af652291d6cb, type: 3}
-  airBubbleChance: 0.3
+  airBubbleChance: 0.345
   flippers: {fileID: 1185549367945119342, guid: 290f52382a259964e985310e286bd327, type: 3}
   flippersChance: 0.194
   healthKit: {fileID: 954508212580592589, guid: ca2229ad633ebbf478b703b6f770eb9d, type: 3}
@@ -917,6 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704851d5c8491c040bd3a6d27805dad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeAnimator: {fileID: 1744028234}
 --- !u!4 &1101863133
 Transform:
   m_ObjectHideFlags: 0
@@ -1408,6 +1410,7 @@ GameObject:
   - component: {fileID: 1744028236}
   - component: {fileID: 1744028235}
   - component: {fileID: 1744028234}
+  - component: {fileID: 1744028237}
   m_Layer: 5
   m_Name: Fader
   m_TagString: Untagged
@@ -1466,7 +1469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1491,6 +1494,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744028232}
   m_CullTransparentMesh: 1
+--- !u!114 &1744028237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744028232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fcfb32a40f344249bd2cf2c920e4104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1924230528
 GameObject:
   m_ObjectHideFlags: 0
