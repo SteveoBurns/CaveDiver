@@ -8,13 +8,8 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
 
-    private bool isPaused = true;
+    
 
-    private void Start()
-    {
-        if (isPaused)
-            Time.timeScale = 0;
-    }
 
     private void Update()
     {
@@ -37,14 +32,13 @@ public class Menu : MonoBehaviour
 
     public void Pause()
     {
-        isPaused = true;
+       
         Time.timeScale = 0;
         pausePanel.SetActive(true);
     }
 
     public void Resume()
     {
-        isPaused = false;
         Time.timeScale = 1;
         pausePanel.SetActive(false);
     }
