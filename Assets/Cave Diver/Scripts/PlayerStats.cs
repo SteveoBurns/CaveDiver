@@ -21,9 +21,9 @@ public class PlayerStats : MonoBehaviour
     [Header("Health")]
     [SerializeField] private float healthMax = 50;
     [SerializeField] private Slider healthSlider;
-    
-    
 
+
+    [SerializeField] private GameObject winPanel;
     
 
 
@@ -103,6 +103,11 @@ public class PlayerStats : MonoBehaviour
                 health = healthMax;
             }
             Destroy(collider.gameObject);
+        }
+        if (collider.tag == "EndLevel")
+        {
+            Time.timeScale = 0;
+            winPanel.SetActive(true);
         }
     }
 

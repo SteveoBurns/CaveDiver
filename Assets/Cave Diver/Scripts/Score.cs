@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
 
     [SerializeField] private GameObject player;
     [SerializeField] private TextMeshProUGUI scoreText;
-    private int score = 0;
+    public static int score = 0;
 
     // Start is called before the first frame update
     void Start()

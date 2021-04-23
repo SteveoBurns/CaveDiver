@@ -22,7 +22,9 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Level 1");
+        
     }
 
     public void MainMenu()

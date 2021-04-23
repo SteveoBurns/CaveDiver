@@ -6,6 +6,7 @@ public class GenerateLevel : MonoBehaviour
 {
     [Header("Level Modules")]
     [SerializeField] private List<Transform> levelModules = new List<Transform>();
+    [SerializeField] private Transform endLevelModule;
 
 
     private Transform nextModule;
@@ -58,14 +59,27 @@ public class GenerateLevel : MonoBehaviour
     {
         float xPos = Camera.main.transform.position.x;
 
-
-        if (oldX - xPos <= 0.1f)
+        if (Score.score <= 500)
         {
-            SpawnPowerUp();
-            
-            nextModule = GameObject.Instantiate(levelModules[Random.Range(0, levelModules.Count)], new Vector3(xPos + 40, 0, 0), Quaternion.identity);
-            oldX = nextModule.position.x - 20;
 
+            if (oldX - xPos <= 0.1f)
+            {
+                SpawnPowerUp();
+
+                nextModule = GameObject.Instantiate(levelModules[Random.Range(0, levelModules.Count)], new Vector3(xPos + 40, 0, 0), Quaternion.identity);
+                oldX = nextModule.position.x - 20;
+
+            }
+        }
+        else
+        {
+            if (oldX - xPos <= 0.1f)
+            {
+                SpawnPowerUp();
+
+                nextModule = GameObject.Instantiate(endLevelModule, new Vector3(xPos + 40, 0, 0), Quaternion.identity);
+                oldX = nextModule.position.x - 20;
+            }
         }
         
     }

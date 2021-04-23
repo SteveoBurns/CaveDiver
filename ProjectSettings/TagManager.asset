@@ -8,6 +8,7 @@ TagManager:
   - Flippers
   - Mine
   - Health
+  - EndLevel
   layers:
   - Default
   - TransparentFX
