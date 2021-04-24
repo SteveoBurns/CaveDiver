@@ -162,7 +162,7 @@ MonoBehaviour:
   - {fileID: 8668334621882205861, guid: 75702c63c35664444bb278e16005f58c, type: 3}
   endLevelModule: {fileID: 8668334621882205861, guid: f30a41b4242e15e4f9f94955ec45169f, type: 3}
   airBubble: {fileID: 5336892529235186563, guid: 8834305e56311b743bf5af652291d6cb, type: 3}
-  airBubbleChance: 0.345
+  airBubbleChance: 0.38
   flippers: {fileID: 1185549367945119342, guid: 290f52382a259964e985310e286bd327, type: 3}
   flippersChance: 0.194
   healthKit: {fileID: 954508212580592589, guid: ca2229ad633ebbf478b703b6f770eb9d, type: 3}

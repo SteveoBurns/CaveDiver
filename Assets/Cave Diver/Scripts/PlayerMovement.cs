@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("FlippersOn", false);
             playerSpeed = normalPlayerSpeed;
-            diveSpeed = normalPlayerSpeed * 2;
+            diveSpeed = normalPlayerSpeed * 1.5f;
             flippersOn = false;
         }
         Debug.Log(flipperBoostTimer);

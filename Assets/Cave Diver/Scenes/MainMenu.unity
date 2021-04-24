@@ -644,7 +644,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000061035156, y: -148}
-  m_SizeDelta: {x: 717.8477, y: 296}
+  m_SizeDelta: {x: 717.848, y: 363.794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711666469
 MonoBehaviour:
@@ -666,14 +666,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Instructions:
-
-
-    Press "space bar" to dive and release to float.
-
-
-    Avoid
-    the Mines'
+  m_text: "Instructions:\n\nPress \"space bar\" to dive and release to float.\n\nAvoid
+    the Mines. \n\nWatch your oxygen and health.\n\nTry to make it out alive."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d707b198cd774f643b52092482aff464, type: 2}
   m_sharedMaterial: {fileID: -2476576113468185081, guid: d707b198cd774f643b52092482aff464, type: 2}
@@ -700,8 +694,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 10
@@ -1756,7 +1750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 99}
+  m_AnchoredPosition: {x: 0, y: 133}
   m_SizeDelta: {x: 612.2861, y: 125.8226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879481606

@@ -14,6 +14,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         scoreText.text = "Score: " + score;
+        score = 0;
 
     }
 
