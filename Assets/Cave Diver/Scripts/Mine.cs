@@ -9,7 +9,9 @@ public class Mine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Playe explosion animation
         animator.SetTrigger("OnHit");
+        // Play explosion sound
         explosion.Play();
     }    
 }
