@@ -20,11 +20,9 @@ public class Score : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if(player.transform.position.x > score)
-        {
-            score = Mathf.RoundToInt(player.transform.position.x);
-            scoreText.text = "Score: " + score;
-        }
+    {   
+        //Updates score based on players x position
+        score = Mathf.RoundToInt(player.transform.position.x);
+        scoreText.text = "Score: " + score;
     }
 }
