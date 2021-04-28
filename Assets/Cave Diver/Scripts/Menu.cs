@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
-
+    [SerializeField] private GameObject creditspanel;
     
 
 
@@ -44,6 +44,16 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1;
         pausePanel.SetActive(false);
     }
+
+    public void CreditsShow()
+    {
+        creditspanel.SetActive(true);
+    }
+    public void CreditsHide()
+    {
+        creditspanel.SetActive(false);
+    }
+
 
     public void ExitGame()
     {
