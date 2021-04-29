@@ -32,19 +32,21 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        //Movement
         transform.position += Vector3.right * playerSpeed * Time.fixedDeltaTime;
         transform.position += Vector3.up * playerSpeed * Time.fixedDeltaTime;
 
+        //Diving when pressing space bar
         if (Input.GetButton("Dive"))
         {
             transform.position += Vector3.down * diveSpeed * Time.fixedDeltaTime;
         }
-
+        //Movement changes when flipppers are on
         if (flippersOn)
         {
             FlippersOn();
         }
-
+        //Test when player dies.
         if (PlayerStats.oxygenLevel <= 0 || PlayerStats.health <= 0)
         {
             playerSpeed = 0;

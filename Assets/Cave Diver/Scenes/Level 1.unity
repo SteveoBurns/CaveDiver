@@ -162,11 +162,11 @@ MonoBehaviour:
   - {fileID: 8668334621882205861, guid: 75702c63c35664444bb278e16005f58c, type: 3}
   endLevelModule: {fileID: 8668334621882205861, guid: f30a41b4242e15e4f9f94955ec45169f, type: 3}
   airBubble: {fileID: 5336892529235186563, guid: 8834305e56311b743bf5af652291d6cb, type: 3}
-  airBubbleChance: 0.38
+  airBubbleChance: 0.395
   flippers: {fileID: 1185549367945119342, guid: 290f52382a259964e985310e286bd327, type: 3}
   flippersChance: 0.194
   healthKit: {fileID: 954508212580592589, guid: ca2229ad633ebbf478b703b6f770eb9d, type: 3}
-  healthKitChance: 0.06
+  healthKitChance: 0.139
 --- !u!4 &61881163
 Transform:
   m_ObjectHideFlags: 0
@@ -1103,7 +1103,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3130,6 +3130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 1445310674}
+  creditspanel: {fileID: 0}
 --- !u!1 &2106502243
 GameObject:
   m_ObjectHideFlags: 0
